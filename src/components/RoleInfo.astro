@@ -11,7 +11,7 @@ interface Props {
   ability?: string;
   indicators?: string;
   winCondition?: string;
-  causeOfDeath?: string;
+  causeOfDeath?: { targetCauseofDeath: string; selfCauseofDeath: string };
 }
 
 const { basis, ability, indicators, winCondition, causeOfDeath } = Astro.props;
@@ -183,7 +183,10 @@ if (segments.length > 2) {
             </svg>
             {t("causeOfDeath", lang)}
           </span>
-          <span class="role-value">{causeOfDeath}</span>
+          <span class="role-value">
+            {t("targetCauseofDeath", lang)}: {causeOfDeath.targetCauseofDeath} <br />
+            {t("selfCauseofDeath", lang)}: {causeOfDeath.selfCauseofDeath}
+          </span>
         </div>
       )
     }

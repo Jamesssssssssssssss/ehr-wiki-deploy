@@ -6,6 +6,8 @@
   "indicators": "Indicators",
   "winCondition": "Win Condition",
   "causeOfDeath": "Cause of Death",
+  "targetCauseofDeath": "Target",
+  "selfCauseofDeath": "Self",
   "factions": {
     "impostor": "Impostor",
     "crewmate": "Crewmate",
